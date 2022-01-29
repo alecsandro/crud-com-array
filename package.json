@@ -1,7 +1,15 @@
 {
   "name": "testescrud",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "lekao2009 <lekao2009@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "expres": "^0.0.5",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
 }
