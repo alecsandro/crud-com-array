@@ -5,7 +5,7 @@
   "author": "lekao2009 <lekao2009@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "node src/index.js"
+    "dev": "nodemon node src/index.js"
   },
   "dependencies": {
     "expres": "^0.0.5",

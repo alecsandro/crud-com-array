@@ -1,12 +1,31 @@
 const express = require('express')
+// const fs = req
 
 const app = express()
+app.use(express.json())
 
-app.get('/',function(req,res){
-    return res.send('Primeiro COMMIT  4' )
+app.get('/projeto', function (req, res) {
+    const { nome } = req.query;
+    return res.send(`ola seu nome eh ${nome}`)
 })
 
-app.listen(3000,function(){
+app.post('/projeto', function (req, res) {
+    try {
+        if (!req.body) {
+            return res.send('necessario enviar corpo da Mensagem')
+        } else {
+            //const { corpo } = req.body;
+        }
+
+    } catch (error) {
+        console.log(error)        
+    }
+
+    return res.send('Tudo certo')
+})
+
+
+app.listen(3000, function () {
     console.log('Server STARTED')
 })
 
