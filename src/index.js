@@ -1,8 +1,9 @@
 const express = require('express')
-// const fs = req
+const bodyParserErrorHandler = require('express-body-parser-error-handler')
 
 const app = express()
 app.use(express.json())
+app.use(bodyParserErrorHandler());
 
 app.get('/projeto', function (req, res) {
     const { nome } = req.query;
@@ -10,17 +11,8 @@ app.get('/projeto', function (req, res) {
 })
 
 app.post('/projeto', function (req, res) {
-    try {
-        if (!req.body) {
-            return res.send('necessario enviar corpo da Mensagem')
-        } else {
-            //const { corpo } = req.body;
-        }
-
-    } catch (error) {
-        console.log(error)        
-    }
-
+    
+   // const corpo = req.body.corpo
     return res.send('Tudo certo')
 })
 
